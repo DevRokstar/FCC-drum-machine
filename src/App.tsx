@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import './App.css'
 import { type AudioClip } from "./types";
 import Drum from './drum';
@@ -61,7 +62,7 @@ function App() {
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
       .play()
       .catch(console.error);
-      
+
     document.getElementById("drum-" + clip.keyTrigger)?.focus()
     document.getElementById("display")!.innerText = clip.description
   }
